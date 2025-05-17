@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Counter</title>
+
+    <style>
+        *::before::after{
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            background: #353535;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .flex{
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .container{
+            height: 200px;
+            width: 100%;
+            background: #a7a5a5;
+        }
+        
+        .flex-space-3{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            
+        }
+        .flex-space-3 .text-shadow-center{
+            text-shadow: 3px 3px 5px rgb(0, 255, 21);
+            font-size: larger;
+            text-align: center;
+            background: #696969;
+            height: 70%;
+            width: 25%;
+            border-radius: 5%;
+        }
+
+        .text-white-bold{
+            color: honeydew;
+            font-weight: 900;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <main class="flex">
+        <section class="container flex-space-3">
+            <article class="text-shadow-center">
+                <h3>Experience</h3>
+                <span data-counter="10" class="text-white-bold number">0</span>&ThinSpace;<span class="text-white-bold">Years</span>
+            </article>
+            <article class="text-shadow-center">
+                <h3>Projects Completed</h3>
+                <span data-counter="300" class="text-white-bold number">0</span>
+            </article>
+            <article class="text-shadow-center">
+                <h3>Technologies Used</h3>
+                <span data-counter="15" class="text-white-bold number">0</span>
+            </article>
+
+
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
