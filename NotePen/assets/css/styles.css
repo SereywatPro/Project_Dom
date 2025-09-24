@@ -1,0 +1,37 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(45deg , red , green, blue);
+}
+
+.NotePen-Section{
+    height: 100vh;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.NotePen-Section .card-header{
+    background-color: darkblue;
+    color: gainsboro;
+}
+.NotePen-Section .card-body{
+    background-color: dodgerblue !important;
+    color: darkblue;
+}
+
+.box-things{
+    width: 90%;
+    margin: auto;
+    background-color: #333;
+    color: cornsilk;
+    font-style: italic;
+    margin-block: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    word-break: break-all;
+}
