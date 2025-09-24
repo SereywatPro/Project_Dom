@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator BMI</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to left top, lightblue, darkturquoise);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .main-calculator {
+            height: 27rem;
+            width: 33rem;
+            background-color: lightseagreen;
+            color: lightcyan;
+            overflow: auto;
+            border-radius: 10%;
+            align-content: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        input {
+            border-radius: 5px;
+            outline-color: cadetblue;
+            padding: 10px;
+            float: left;
+            width: 53%;
+            transition: all .3s ease;
+            margin-right: 0.5rem;
+        }
+
+        label {
+            padding: 10px;
+            float: left;
+            width: 15%;
+        }
+
+        .txt-note {
+            color: rgb(2, 90, 90);
+        }
+
+        input:focus {
+            border-radius: 25px;
+            outline-color: rgb(0, 255, 191);
+        }
+
+        .btn-bmi {
+            padding: 10px 20px;
+            color: darkcyan;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all .3s ease;
+        }
+
+        .btn-bmi:active {
+            transform: scale(0.9);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .Description-weight {
+            text-align: center;
+            font-size: 20px;
+            color: rgb(0, 65, 65);
+        }
+
+        table {
+            border: 2px solid rgb(140 140 140);
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        table tr th[colspan="2"] {
+            font-size: 25px;
+            background-color: rgba(0, 128, 128, 0.849);
+            color: #fff;
+            border-radius: 15px;
+
+        }
+
+        table th,
+        td {
+            background-color: turquoise;
+            color: #333;
+            font-size: 1rem;
+            align-items: center;
+            padding: 1.2rem 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="table-container">
+                    <table class="table" align="center">
+                        <thead>
+                            <tr>
+                                <th colspan="2">BMI Categories</th>
+                            <tr>
+                            <tr>
+                                <th class="sub-header fs-1">BMI Category</th>
+                                <th class="sub-header fs-1">BMI Range</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Underweight</td>
+                                <td>Below 18.5</td>
+                            </tr>
+                            <tr>
+                                <td>Healthy</td>
+                                <td>18.5 – 24.9</td>
+                            </tr>
+                            <tr>
+                                <td>Overweight</td>
+                                <td>25.0 – 29.9</td>
+                            </tr>
+                            <tr>
+                                <td>Obesity</td>
+                                <td>30.0 or above</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2"> 
+                                    <a href="imgae.html" >View More</a>
+                                </td>
+
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="main-calculator">
+            <form>
+                <h2>Calculate Your <span class="txt-note">Body Mass Index</span></h2>
+                <div>
+                    <label for="">Height: </label>
+                    <input type="number" name="height" onchange="calcBMI(event)" class="input-height"
+                        placeholder="height">
+                    <p>(centimeters no dot)</p>
+                </div>
+                <div>
+                    <label for="Weight">Weight: </label>
+                    <input type="number" name="weight" onchange="calcBMI(event)" class="input-weight"
+                        placeholder="weight">
+                    <p>(kilograms)</p>
+                </div>
+                <!-- <button type="submit" class="btn-bmi">compute bmi</button> -->
+                <p class="Description-weight">You BMI:</p>
+                <span class="txt-bmi-category"></span>
+            </form>
+
+        </section>
+    </main>
+
+</body>
+<script src="script.js"></script>
+
+</html>
