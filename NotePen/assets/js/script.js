@@ -6,7 +6,7 @@ const vInput = document.querySelector("#Idea");
 let arr = [];
 btnTakeNote.addEventListener("click", (event) => {
   event.preventDefault();
-  let TxtInput = vInput.value;
+  var TxtInput = vInput.value;
 
   if (TxtInput) {
     arr.push(TxtInput);
@@ -20,6 +20,7 @@ btnTakeNote.addEventListener("click", (event) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   let getTxtToSave = JSON.parse(localStorage.getItem("your writing"));
+  arr = getTxtToSave;
   if (getTxtToSave) {
     getTxtToSave.forEach((note) => createMessage(note));
   }
@@ -37,6 +38,8 @@ function createMessage(txt) {
   const btnClose = NewMessage.querySelector(".btn-danger");
   btnClose.addEventListener("click", () => {
     NewMessage.remove();
-    localStorage.removeItem("your writing");
+    arr = arr.filter((item) => item !== txt);
+    localStorage.setItem("your writing", JSON.stringify(arr));
+    //   localStorage.removeItem("your writing");
   });
 }
