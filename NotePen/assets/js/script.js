@@ -20,8 +20,8 @@ btnTakeNote.addEventListener("click", (event) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   let getTxtToSave = JSON.parse(localStorage.getItem("your writing"));
-  arr = getTxtToSave;
   if (getTxtToSave) {
+    arr = getTxtToSave;
     getTxtToSave.forEach((note) => createMessage(note));
   }
 });
