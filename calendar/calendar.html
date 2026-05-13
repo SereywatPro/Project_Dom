@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini CalendarJS</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: cornflowerblue;
+            font-family: cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .calendar-container{
+            background-color: aliceblue;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px gray;
+            overflow: hidden;
+        }
+
+        .month-name{
+            margin: 0;
+            background-color: rgb(255, 46, 46);
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            font-weight:bold;
+        }
+        .day-name{
+            color: rgb(190, 190, 190);
+            font-size: 15px;
+            font-weight: 600;
+            width:100%;
+           
+        }
+        .day-num{
+            font-size: 80px;
+            margin: 0;
+            font-weight: bold;
+        }
+        .year{
+            font: 15px;
+            font-weight: 600;
+            color: rgb(190, 190, 190);
+            margin: 20px 0;
+        }
+        .time{
+            position: relative;
+            position: absolute;
+            font-size:15px;
+            font-weight:bolder;
+            color: rgb(0, 0, 0);
+            margin: 0 auto;
+            bottom: 250px;
+            background-color: aliceblue;
+            border-radius: 5px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgb(0, 0, 0,.3);
+        }
+
+   
+
+    </style>
+</head>
+<body>
+    <div class="calendar-container">
+        <p class="month-name" id="month-name">may</p>
+        <p class="day-name" id="day-name">Sunday</p>
+        <p class="day-num" id="day-number">21</p>
+        <p class="year" id="year">2021</p>
+    </div>
+    <p class="time" id="time">1:20:10</p>
+</body>
+<script src="Mini_calendar.js"></script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart trail animation</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+        }
+        span{
+            background: url(https://cdn4.iconfinder.com/data/icons/set-1/32/__1-512.png);
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            pointer-events: none;
+            transform: translate(-50%,-50%);
+            background-size: cover;
+            animation: anima 2s linear;
+        }
+        @keyframes anima{
+            0%{
+                transform: translate(-50%,-50%);
+                opacity: 1;
+                filter: hue-rotate(0deg); /* defualt color */
+            }
+            100%{
+                transform: translate(-50%, -500%);
+                opacity: 0;
+                filter: hue-rotate(360deg); /* color change red to blue and more ... */
+            }
+        }
+    </style>
+</head>
+<body>
+  
+</body>
+    <script src="heart.js">
+    
+    </script>
+</html>
